@@ -1,0 +1,19 @@
+{
+  "name": "bank-it",
+  "version": "1.0.0",
+  "description": "Bank operations API",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandeddavid/bank-it.git"
+  },
+  "author": "David Mwangi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandeddavid/bank-it/issues"
+  },
+  "homepage": "https://github.com/brandeddavid/bank-it#readme"
+}
