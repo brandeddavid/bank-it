@@ -1,12 +1,6 @@
-const sequelize = require('sequelize');
-
-/**
- * 
- * @param { object } sequelize 
- * @param { object } DataTypes 
- */
-const user = (sequelize, DataTypes) => {
-  const User = sequelize.define('user', {
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const user = sequelize.define('user', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -29,7 +23,14 @@ const user = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-  })
-}
-
-export default user;
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
+  }, {});
+  user.associate = function(models) {
+    // associations can be defined here
+  };
+  return user;
+};
