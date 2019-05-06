@@ -8,8 +8,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.status(200).send({ status: 200, message: "Welcome to Bank It App" })
-})
+require('./server/routes')(app);
 
 module.exports = app;
