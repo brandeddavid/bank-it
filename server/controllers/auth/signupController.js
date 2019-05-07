@@ -15,5 +15,5 @@ module.exports = {
     .catch(error => {
       res.status(400).send({ message: "User creation failed", status: 400, error: error })
     })
-  }
+  },
 }
