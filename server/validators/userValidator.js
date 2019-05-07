@@ -7,6 +7,10 @@ const signupConstraints = {
   lastName: {
     presence: true,
   },
+  email: {
+    presence: true,
+    email: true
+  },
   username: {
     presence: true,
   },
