@@ -23,10 +23,24 @@ const signupConstraints = {
   },
 }
 
+const signinConstraints = {
+  username: {
+    presence: true,
+  },
+  password: {
+    presence: true,
+  },
+}
+
 validateSignup = (data) => {
   return validate(data, signupConstraints)
 }
 
+validateSignin = (data) => {
+  return validate(data, signinConstraints)
+}
+
 module.exports = {
   validateSignup,
+  validateSignin,
 }
